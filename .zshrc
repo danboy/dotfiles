@@ -49,12 +49,14 @@ if [ -f '/tmp/google-cloud-sdk/path.zsh.inc' ]; then . '/tmp/google-cloud-sdk/pa
 # The next line enables shell command completion for gcloud.
 if [ -f '/tmp/google-cloud-sdk/completion.zsh.inc' ]; then . '/tmp/google-cloud-sdk/completion.zsh.inc'; fi
 
-alias dev='sh ~/.leapdev'
+alias dev='cd ~/Projects/pinmonkey-app && sh ~/Projects/pinmonkey-app/.tmux'
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 export EDITOR=vim
+
+export PATH=$PATH:/opt/google-cloud-sdk/bin/
 
 eval "$(starship init zsh)"
